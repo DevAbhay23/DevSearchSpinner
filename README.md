@@ -1,5 +1,5 @@
 # DevSearchSpinner
-DevSpinner is a dialog spinner with the search feature in multiple Indian regional languages<br>
+DevSearchSpinner is a dialog spinner with the search feature in multiple Indian regional languages<br>
 Supports data from custom models.<br>
 Sort Data according to type of data set in adapter.<br>
 
