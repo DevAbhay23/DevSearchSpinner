@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@android:id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_text_selector"
+        android:maxLines="1"
+        android:padding="@dimen/padding10"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/textsize_16sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <View
+        android:id="@+id/hrLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/medium_grey" />
+</RelativeLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DevSpinner</string>
+    <string name="spinner_caption">Select</string>
+</resources>
