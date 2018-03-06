@@ -6,6 +6,19 @@ Sort Data according to type of data set in adapter.<br>
 Android Versions Support- <b>2.3-Latest</b><br><br>
 
 # Usage
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			maven { url 'https://jitpack.io' }
+		}
+	}
+ 
+Step 2. Add the dependency
+
+	dependencies {
+	        compile 'com.github.DevAbhay23:DevSearchSpinner:v1.0'
+	}
  <b>In Layout xml :</b>
  <devspinner.DevSpinnerControl
         android:id="@+id/spinnerState"
