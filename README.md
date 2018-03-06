@@ -4,11 +4,9 @@ Supports data from custom models.<br>
 Sort Data according to type of data set in adapter.<br>
 
 Android Versions Support- <b>2.3-Latest</b><br><br>
-![Screenshot](screen_one.png)
-![Screenshot](screen_two.png)
-![Screenshot](screen_three.png)
-![Screenshot](screen_four.png)
+
 # Usage
+ <b>In Layout xml :</b>
  <devspinner.DevSpinnerControl
         android:id="@+id/spinnerState"
         android:layout_width="wrap_content"
@@ -16,11 +14,11 @@ Android Versions Support- <b>2.3-Latest</b><br><br>
         android:background="@drawable/spinner_custom_background"
            />
 
- In your java file add these lines of code :
+ <b>In your java file add these lines of code :</b>
   devspinner.DevCustomSpinnerAdap<CustomModel> adapter = new devspinner.DevCustomSpinnerAdap(mContext, R.layout.spinner_view, mList,comparator);
   spinnerState.setAdapter(adapter);
 
- For Custom TypeFace:
+ <b>For Custom TypeFace:</b>
  adapter.setFontToSpinner(customTypeFace)
 
  For myComparator:
