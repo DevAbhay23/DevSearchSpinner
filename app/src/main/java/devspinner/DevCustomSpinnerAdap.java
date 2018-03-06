@@ -18,7 +18,7 @@ import java.util.List;
 public class DevCustomSpinnerAdap<T> extends ArrayAdapter<String> {
 
     Context mContext;
-    TextView openSpinnerTextView,closedSpinnerTextView;
+    Typeface tf;
        /**
      * @param context
      * @param resource
@@ -41,8 +41,11 @@ public class DevCustomSpinnerAdap<T> extends ArrayAdapter<String> {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        closedSpinnerTextView = (TextView) super.getView(position, convertView, parent);
+        TextView closedSpinnerTextView = (TextView) super.getView(position, convertView, parent);
         closedSpinnerTextView.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+        if(tf!=null){
+            closedSpinnerTextView.setTypeface(tf);
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             closedSpinnerTextView.setAllCaps(true);
         }
@@ -63,9 +66,11 @@ public class DevCustomSpinnerAdap<T> extends ArrayAdapter<String> {
             convertView = View.inflate(getContext(), R.layout.spinner_dialog_textview, null);
         }
         View view = super.getDropDownView(position, convertView, parent);
-        openSpinnerTextView = (TextView) view.findViewById(android.R.id.text1);
+        TextView openSpinnerTextView = (TextView) view.findViewById(android.R.id.text1);
         openSpinnerTextView.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
-
+        if(tf!=null){
+            openSpinnerTextView.setTypeface(tf);
+        }
         int[][] states = new int[][]{
                 new int[]{android.R.attr.state_activated}, // pressed
                 new int[]{android.R.attr.state_focused}, // focused
@@ -83,24 +88,13 @@ public class DevCustomSpinnerAdap<T> extends ArrayAdapter<String> {
 
     /**
      * setting custom typeface to spinner dialog values.
-     * @param tf
+     * @param mTypeFace
      */
-    public void setTypeFaceToSpinnerOpen(Typeface tf){
-        if(openSpinnerTextView!=null){
-            openSpinnerTextView.setTypeface(tf);
-        }
-
+    public void setFontToSpinner(Typeface mTypeFace){
+        tf=mTypeFace;
     }
 
 
-    /**
-     *setting custom typeface to spinner closed textview.
-     * @param tf
-     */
-    public void setTypeFaceToSpinnerClosed(Typeface tf){
-        if(closedSpinnerTextView!=null){
-            closedSpinnerTextView.setTypeface(tf);
-        }
-    }
+
 
 }

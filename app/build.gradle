@@ -1,8 +1,9 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion "26.0.3"
     defaultConfig {
         minSdkVersion 10
         versionCode 1
@@ -22,6 +23,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.4.0'
     compile 'com.android.support:design:25.4.0'
     compile 'org.greenrobot:eventbus:3.0.0'
-
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

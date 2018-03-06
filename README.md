@@ -16,3 +16,24 @@ Android Versions Support- <b>2.3-Latest</b><br><br>
         android:background="@drawable/spinner_custom_background"
            />
 
+ In your java file add these lines of code :
+  devspinner.DevCustomSpinnerAdap<CustomModel> adapter = new devspinner.DevCustomSpinnerAdap(mContext, R.layout.spinner_view, mList,comparator);
+  spinnerState.setAdapter(adapter);
+
+ For Custom TypeFace:
+ adapter.setFontToSpinner(customTypeFace)
+
+ For myComparator:
+  // Override your compare method on basis of the Custom Model chosen for Spinner Data.
+  // Default is String Type Comparison.
+
+  devspinner.UtilsMethods.MyComparator comparator=new devspinner.UtilsMethods.MyComparator(){
+     @Override
+     public int compare(Object o1, Object o2) {
+         CustomModel w_o1=(CustomModel)o1;
+         CustomModel w_o2=(CustomModel)o2;
+         return  w_o1.tag.compareTo(w_o2.tag);
+     }
+  };
+
+
