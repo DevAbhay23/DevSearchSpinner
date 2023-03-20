@@ -3,7 +3,7 @@ DevSearchSpinner is a dialog spinner with the search feature in multiple Indian 
 Supports data from custom models.<br>
 Sort Data according to type of data set in adapter.<br>
 
-Android Versions Support- <b>2.3-Latest</b><br><br>
+Android Versions Support- <b>2.3-9.0</b><br><br>
 
 # Usage
 Add it in your root build.gradle at the end of repositories:
